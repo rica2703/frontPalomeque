@@ -1,0 +1,22 @@
+:root{
+    --primario: white;
+    --secundario: white;
+    --Card: white;
+    
+}
+
+
+body{
+    background-color: var(--primario);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;    
+   
+}
+
+
+   
+  
+  
