@@ -2,6 +2,7 @@
 import React from "react";
 import "../styles/atomos.css";
 import Button from "./atomos/Button";
+import Label from "./Moleculas/Label";
 
 export default function Logging() {
   const bProps = [
@@ -16,29 +17,9 @@ export default function Logging() {
         <div className="containerLogging">
           <div className="headerLogging"
           >
-            <div>
-              <h1
-              style={{
-                textAlign:"center",
-                margin:"0 auto",
-                marginLeft: "160px",
-              }}
-              
-              >¡Bienvenido a
-              
-              </h1>
-              
-            </div>
-            <div>
-              <h1
-                style={{
-                  color: "#426B1F",
-                  marginLeft: "6%"
-                }}
-              >
-                RentLaR!
-              </h1>
-            </div>
+            
+            <Label title="Bienvenidos a" text="RentLaR"/>
+
           </div>
           <div
             style={{

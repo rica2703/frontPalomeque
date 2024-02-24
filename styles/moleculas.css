@@ -88,3 +88,36 @@
   color: black;
   font-size: 15px;
 }
+
+.CardText{
+  width: 50%;
+  height: 30vh;
+  border-radius: 10px;
+  border: green 3px solid;
+  background: #fafaf5;
+}
+
+.CardText p{
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.TitleLabelClass{
+  width: 100%;
+  font-size: 30px;
+  border-bottom: 3px solid #426B1F;
+  margin: 40px 0;
+}
+
+.TitleLabelClass .textClass{
+  position: relative;
+  top: 0;
+  text-align: center;
+}
+
+.TitleLabelClass .complementClass{
+  position: relative;
+  bottom: 70px;
+  color: #426B1F;
+}
