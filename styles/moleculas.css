@@ -68,7 +68,7 @@
   margin: 5px;
   display: flex;
   justify-content: center;
-}
+} 
 
 .Img {
   width: 200px;
@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 500px;
   height: 200px;
 }
 
@@ -93,7 +93,7 @@
   width: 50%;
   height: 30vh;
   border-radius: 10px;
-  border: green 3px solid;
+  border: #426B1F 5px solid;
   background: #fafaf5;
 }
 
@@ -120,4 +120,22 @@
   position: relative;
   bottom: 70px;
   color: #426B1F;
+}
+
+.card{
+  margin: 10px auto;
+  background: rgb(255, 250, 250);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.358);
+  padding: 20px;
+  border-radius: 10px;
+}
+.card a {
+  background-color: #426B1F;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-left: 20%;
+
 }

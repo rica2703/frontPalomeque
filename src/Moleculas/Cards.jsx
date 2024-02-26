@@ -18,7 +18,7 @@ export default function Cards({ cProps }) {
           <>
             <div className="card_Cont">
               <div className="card_Img">
-                <img src={info.url} alt="imagenPrueba" className="Img" />
+                <img src={info.url} alt="hols" className="Img" />
               </div>
               <div className="text_Img">
                 <h1> {info.tituloCard}</h1>

@@ -7,6 +7,7 @@ function  Contrato() {
         <div>
             <LabelTitle complement="RentLaR" text="Contrato"/>
             <CardCon/>
+           
         </div>
 
     );

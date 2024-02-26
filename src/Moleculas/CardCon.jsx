@@ -1,12 +1,13 @@
 
+
 function CardCon() {
     return (
         <div className="cardContratoClass">
         <h1>
-            {title}
+            {titulo}
         </h1>
         <p>
-            {sub}
+            {subtitulo}
         </p>
         <p>
             {cont[0]}
