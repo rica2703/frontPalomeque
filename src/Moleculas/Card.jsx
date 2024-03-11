@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/moleculas.css'
-
+  
 const Card = (str) => {
   return (
     <div className='card'>

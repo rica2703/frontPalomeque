@@ -1,142 +1,163 @@
 :root {
-    --font-family: system-ui, sans-serif;
-    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
-    --clr-primary-200: rgb(255, 255, 255);
-    --clr-accent-300: rgb(206, 85, 85);
-    --clr-accent-400: rgb(181, 43, 64);
-    --clr-shadow-200: rgb(5, 5, 5) ;
-    --clr-shadow-300: rgb(92, 92, 92);
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .input {
-    padding-inline: 0.6em;
-    border-radius: 4px;
-    max-width: 12.5rem;
-    height: 2.5rem;
-    color: var(--clr-shadow-300);
-    border: 1px solid var(--clr-shadow-200);
-  }
-  
-  .input-wrapper {
-    height: fit-content;
-    position: relative;
-    line-height: 14px;
-    margin: 0 10px;
-    display: inline-block;
-    min-width: 200px;
-    max-width: 12.5rem;
-    height: 2.5rem;
-    background-color: white;
-  }
-  
-  .input-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    background: none;
-    transition: all 160ms ease-in;
-  }
-  
-  .input-text:hover {
-    border-color: var(--clr-accent-300);
-  }
-  
-  .input-text:focus {
-    border-color: var(--clr-accent-400);
-  }
-  
-  .input-text:focus ~ .input-label,
-  .input-text:not(:placeholder-shown) ~ .input-label,
-  .input-text:not(:placeholder-shown):focus ~ .input-label {
-    top: -0.5rem;
-    font-size: 0.8rem;
-    left: 0.6rem;
-    color: var(--clr-accent-400);
-  }
-  .input-text:not(:focus):not(:placeholder-shown) ~ .input-label {
-    color: var(--clr-shadow-200);
-    background-color: var(--clr-primary-200);
-  }
-  .input-label {
-    position: absolute;
-    left: 0.4rem;
-    top: 0.8rem;
-    padding: 0 0.5rem;
-    color: var(--clr-shadow-300);
-    cursor: text;
-    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in,
-      color 200ms ease-in;
-    background-color: white;
-  }
-  
-  .bigContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-  }
-  
-  .containerLogging {
-    height: 500px;
-    width: 50%;
-    background-color: white;
-    margin: 120px auto; 
-  }
-  
-  
-  .containerLanding {
-    height: 500px;
-    width: 100%;
-    background-color: white;
-  }
-  
-  .Button {
-    width: 180px;
-    height: 32px;
-    background-color: #426B1F;
-  }
-  
-  .headerLogging {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    align-content: center;
-    margin-left: 40px;
-  }
-  
-  .headerLanding {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    align-content: center;
-    margin-left: 40px;
-  }
-  
-  .formContainerLogging {
-    background-color: #FAFAF5;
-    height: 300px;
-    width: 70%;
-    border-radius: 5px;
-    margin: 45px auto; 
-    box-shadow: -5px 6px 32px -3px rgba(0, 0, 0, 0.2);
-    border-color: #65717d;
-  }
-  
-  
-  .tituloLanding{
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-  
-  }
+  --font-family: system-ui, sans-serif;
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --clr-primary-200: rgb(255, 255, 255);
+  --clr-accent-300: rgb(206, 85, 85);
+  --clr-accent-400: rgb(181, 43, 64);
+  --clr-shadow-200: rgb(5, 5, 5);
+  --clr-shadow-300: rgb(92, 92, 92);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  padding-inline: 0.6em;
+  border-radius: 4px;
+  max-width: 12.5rem;
+  height: 2.5rem;
+  color: var(--clr-shadow-300);
+  border: 1px solid var(--clr-shadow-200);
+}
+
+.input-wrapper {
+  height: fit-content;
+  position: relative;
+  line-height: 14px;
+  margin: 0 10px;
+  display: inline-block;
+  min-width: 200px;
+  max-width: 12.5rem;
+  height: 2.5rem;
+  background-color: white;
+}
+
+.input-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: none;
+  transition: all 160ms ease-in;
+}
+
+.input-text:hover {
+  border-color: var(--clr-accent-300);
+}
+
+.input-text:focus {
+  border-color: var(--clr-accent-400);
+}
+
+.input-text:focus~.input-label,
+.input-text:not(:placeholder-shown)~.input-label,
+.input-text:not(:placeholder-shown):focus~.input-label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.6rem;
+  color: var(--clr-accent-400);
+}
+
+.input-text:not(:focus):not(:placeholder-shown)~.input-label {
+  color: var(--clr-shadow-200);
+  background-color: var(--clr-primary-200);
+}
+
+.input-label {
+  position: absolute;
+  left: 0.4rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: var(--clr-shadow-300);
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in,
+    color 200ms ease-in;
+  background-color: white;
+}
+
+.bigContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.containerLogging {
+  height: 500px;
+  width: 50%;
+  background-color: white;
+  margin: 120px auto;
+
+}
+
+
+.containerLanding {
+  height: 500px;
+  width: 100%;
+  background-color: white;
+}
+
+.Button {
+  width: 180px;
+  height: 32px;
+  background-color: #426B1F;
+}
+
+.headerLogging {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-content: center;
+  margin-left: 40px;
+}
+
+.headerLanding {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-content: center;
+  margin-left: 40px;
+}
+
+.formContainerLogging {
+  background-color: #FAFAF5;
+  height: 300px;
+  width: 70%;
+  border-radius: 5px;
+  margin: 45px auto;
+  box-shadow: -5px 6px 32px -3px rgba(0, 0, 0, 0.2);
+  border-color: #65717d;
+}
+
+
+.tituloLanding {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+
+}
+
+.InputClass{
+  width: 90%;
+  text-align: left;
+}
+
+.InputClass label{
+  margin: 0 20px;
+}
+
+.InputClass input{
+    border: solid black 1px;
+  outline: none;
+  padding: 10px;
+  width: 90%;
+  height: 40px;
+  border-radius: 100px;
+}

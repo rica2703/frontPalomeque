@@ -4,6 +4,7 @@ import "../styles/atomos.css";
 import Button from "./atomos/Button";
 import Label from "./Moleculas/Label";
 
+
 export default function Logging() {
   const bProps = [
     {
@@ -123,3 +124,4 @@ export default function Logging() {
     </>
   );
 }
+
