@@ -1,31 +1,35 @@
+import React from "react";
 
-
-function CardCon() {
-    return (
-        <div className="cardContratoClass">
-        <h1>
-            {titulo}
-        </h1>
-        <p>
-            {subtitulo}
-        </p>
-        <p>
-            {cont[0]}
-        </p>
-        <p>
-            {cont[1]}
-        </p>
-        <p>
-            {cont[2]}
-        </p>
-        <p>
-            {fecha}
-        </p>
-        <p>
-            {lugar}
-        </p>
-     </div>
-    );
+function CardCon({ CardProps }) {
+  return (
+    <>
+      {CardProps.map((info, index) => ( // Agregué "index" para evitar errores de key
+        <div key={index} className="cardContratoClass">
+          <h1>
+            {info.titulo} {/* Accede a las propiedades de cada objeto "info" */}
+          </h1>
+          <p>
+            {info.subtitulo}
+          </p>
+          <p>
+            {info.cont[0]}
+          </p>
+          <p>
+            {info.cont[1]}
+          </p>
+          <p>
+            {info.cont[2]}
+          </p>
+          <p>
+            {info.fecha}
+          </p>
+          <p>
+            {info.lugar}
+          </p>
+        </div>
+      ))}
+    </>
+  );
 }
 
 export default CardCon;

@@ -1,7 +1,6 @@
-import React from 'react'
-import Card from './Moleculas/Card'
-import '../styles/pages.css'
-import LabelTitle from "./Moleculas/LabelTitle";
+import Card from '../Moleculas/Card';
+import LabelTitle from '../Moleculas/LabelTitle';
+import "../../styles/pages.css"
 
 const CardList = () => {
   return (

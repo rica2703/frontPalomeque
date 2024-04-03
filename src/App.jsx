@@ -1,26 +1,29 @@
 import "../styles/LandingPage.css";
-import Landing from './Landing';
-import Logging from './Loggin';
-import InformacionDePago from './Informaciondepago';
-import Contrato from './Contrato';
-import Sugerencias from "../src/Sugerencias"
-import Comprobantes from "../src/Comprobantes"
-import Perfil from './Perfil';
-import AgregarUsuarios from "./AgregarUsuarios";
-import EdicionUsuarios from "./EdicionUsuarios";
+import Landing from './Pages/Landing';
+import Logging from './Pages/Loggin';
+import InformacionDePago from './Pages/Informaciondepago';
+import Sugerencias from "./Pages/Sugerencias"
+import Perfil from './Pages/Perfil';
+import AgregarUsuarios from "./Pages/AgregarUsuarios";
+import EdicionUsuarios from "./Pages/EdicionUsuarios";
+import MenuUsuario from "./Pages/MenuUsuario";
+import Contrato from "./Pages/Contrato";
+
 
 function App() {
     return (
         <>
            
-            <Logging />
+             <Logging />
             <Landing />
             <InformacionDePago />
             <Sugerencias />
-            <Comprobantes />
             <Perfil />
+            <MenuUsuario/>
+   
             <AgregarUsuarios/>
-            <EdicionUsuarios/>
+<Contrato/> 
+ <EdicionUsuarios/>
         </>
     );
 }

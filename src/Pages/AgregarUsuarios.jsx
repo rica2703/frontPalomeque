@@ -1,7 +1,6 @@
-import '../styles/pages.css'
-import CardInputs from "./Moleculas/CardInputs";
-import LabelTitle from "./Moleculas/LabelTitle";
-
+import CardInputs from "../Moleculas/CardInputs";
+import LabelTitle from "../Moleculas/LabelTitle";
+import "../../styles/pages.css"
 
 function AgregarUsuarios() {
     return ( 

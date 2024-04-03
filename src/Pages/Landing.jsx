@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/atomos.css";
-import Button from "./atomos/Button";
-import Contenido from "./organismo/Contenido";
+import "../../styles/atomos.css"
+import Button from "../atomos/Button";
+import Contenido from "../organismo/Contenido";
 
 export default function Landing() {
   const bProps = [{}];

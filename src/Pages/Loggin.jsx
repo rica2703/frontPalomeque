@@ -1,9 +1,8 @@
 
 import React from "react";
-import "../styles/atomos.css";
-import Button from "./atomos/Button";
-import Label from "./Moleculas/Label";
-
+import "../../styles/atomos.css"
+import Button from "../atomos/Button";
+import Label from "../Moleculas/Label";
 
 export default function Logging() {
   const bProps = [
@@ -47,7 +46,7 @@ export default function Logging() {
                   }}
                 />
 
-                <h1>Iniciar Sesion</h1>
+                <h1>Iniciar Sesió n</h1>
               </div>
               <div
                 style={{

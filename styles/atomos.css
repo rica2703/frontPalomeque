@@ -161,3 +161,14 @@
   height: 40px;
   border-radius: 100px;
 }
+
+
+.boton{
+  background-color: transparent;
+  border: none; 
+  padding: 0; 
+}
+
+.flecha {
+  color: black;
+}
