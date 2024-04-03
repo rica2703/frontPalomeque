@@ -8,22 +8,24 @@ import AgregarUsuarios from "./Pages/AgregarUsuarios";
 import EdicionUsuarios from "./Pages/EdicionUsuarios";
 import MenuUsuario from "./Pages/MenuUsuario";
 import Contrato from "./Pages/Contrato";
-
+import ListaUsuario from "./Pages/ListaUsuario";
 
 function App() {
     return (
         <>
            
-             <Logging />
+               <Logging />
             <Landing />
             <InformacionDePago />
             <Sugerencias />
             <Perfil />
             <MenuUsuario/>
-   
+  
             <AgregarUsuarios/>
-<Contrato/> 
- <EdicionUsuarios/>
+
+ <EdicionUsuarios/>  
+ <ListaUsuario/> 
+ <Contrato/> 
         </>
     );
 }
