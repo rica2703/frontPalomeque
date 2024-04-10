@@ -3,7 +3,7 @@ import '../../styles/moleculas.css';
 
 const CardContrato = () => {
   return (
-    <div className="card">
+    <div className="cards">
       <div className="card-header">Contrato de Arrendamiento de Departamento</div>
       <div className="card-body">
         <div className="property-info">

@@ -1,6 +1,7 @@
 
 import CardContrato from "../Moleculas/CardContrato";
 import LabelTitle from "../Moleculas/LabelTitle";
+import "../../styles/moleculas.css"
 
 function Contrato() {
     return ( 
@@ -12,4 +13,4 @@ function Contrato() {
      );
 }
 
-export default Contrato;
+export default Contrato;    

@@ -10,7 +10,6 @@ function ListaUsuario() {
 <div>
 <LabelTitle text="Lista de Usuarios" complement="RentLaR"/>
 <AtomButton/>
-
 {cardData.map((userData, index) => (
                     <Card1 key={index} {...userData} />
                 ))}

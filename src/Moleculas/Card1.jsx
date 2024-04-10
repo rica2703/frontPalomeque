@@ -2,8 +2,9 @@ import React from 'react';
 
 function CardComponent({ nombre, fechaPago, montoPago, telefono, contactoEmergencia, numeroEmergencia, numeroCuarto, contraseña }) {
   return (
-    <div className="card">
+    <div className="card1">
       <h2>{nombre}</h2>
+      <br />
       <p><strong>Fecha de Pago:</strong> {fechaPago}</p>
       <p><strong>Monto de Pago:</strong> {montoPago}</p>
       <p><strong>Teléfono:</strong> {telefono}</p>

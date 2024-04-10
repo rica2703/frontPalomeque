@@ -31,6 +31,136 @@
     align-items: center;
 }
 
+/*Loggin*/
+.formContainerLogging {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formHeader {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .avatar {
+    height: 50px;
+  }
+  
+  .formTitle {
+    font-size: 26px; 
+    font-weight: bold; 
+  }
+  
+  .inputContainer {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .inputContainer .inputTitle {
+    margin-right: 10px;
+    font-size: 20px; 
+    font-weight: bold; 
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .input {
+    width: 200px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px; 
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  
+  .input:focus + .input-label,
+  .input:not(:placeholder-shown) + .input-label {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .buttonContainer {
+    margin-top: 20px;
+  }
+  
+  .inputContainer:last-child {
+    margin-left: -100px; 
+  }
 
- 
+/* landing.css */
 
+.rentlarTitle {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    margin-left: -3.5%;
+    color: green;
+  }
+  
+  .landingTitleContainer {
+    text-align: center;  
+    margin-top: 50px;
+  }
+  
+  .landingTitle {
+    font-size: 3em;
+    font-family: Newsreader;
+    font-weight: bold;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  
+  /* menuUsuario.css */
+
+.rentlarTitle {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  margin-left: -3.5%;
+  color: green;
+}
+
+.tituloLandingContainer {
+  text-align: center; 
+  margin-left: 35%;
+  margin-top: 50px;
+}
+
+.tituloLanding {
+  font-size: 3em; 
+  font-family: Newsreader;
+  font-weight: bold;
+  margin-left: -9.5%;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: flex-end;
+}

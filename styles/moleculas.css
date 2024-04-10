@@ -129,6 +129,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.358);
   padding: 20px;
   border-radius: 10px;
+  margin-right: 500px;
 }
 
 .card a {
@@ -177,7 +178,7 @@
 }
 
 
-.card {
+.cards {
   display: flex; 
   flex-direction: column; 
   border: 5px solid #426B1F;
@@ -186,6 +187,8 @@
   max-width: 600px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin: 0 auto;
+  
 }
 
 .card-header {
@@ -197,6 +200,7 @@
 
 .card-body {
   padding: 20px;
+  text-align: justify;
 }
 
 .property-info {
@@ -210,3 +214,18 @@
 .description {
   line-height: 1.5;
 }
+
+  .card1 {
+    margin: 10px auto;
+    background: rgb(255, 250, 250);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.358);
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #426B1F;
+    max-width: 400px; 
+  }
+
+  .card1 h2 {
+    text-align: center;
+  }
+

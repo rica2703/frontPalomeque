@@ -1,7 +1,9 @@
+
 import React from "react";
 import "../../styles/atomos.css";
+import "../../styles/pages.css"; 
 import Button from "../atomos/Button";
-import Contenido from "../organismo/Contenido";
+import Usuario from "../organismo/Usuario";
 
 export default function MenuUsuario() {
   const bProps = [{}];
@@ -11,54 +13,21 @@ export default function MenuUsuario() {
       <div className="bigContainer">
         <div className="containerLanding">
           <header className="headerLanding">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                margin: "5px",
-                marginLeft: "-3.5%",
-              }}
-            >
-              <h1
-                style={{
-                  color: "green",
-                }}
-              >
-                RentLaR!
-              </h1>
+            <div className="rentlarTitle">
+              <h1>RentLaR!</h1>
             </div>
-            <div
-              className="tituloLanding"
-              style={{ marginLeft: "35%", marginTop: "50px" }}
-            >
-              <h1
-                style={{
-                  fontSize: "2em",
-                  fontFamily: "Newsreader",
-                  fontWeight: "bold",
-                }}
-              >
-                ¡Bienvenido Emprendedor!
-              </h1>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "50%",
-                  justifyContent: "flex-end",
-                }}
-              >
+            <div className="tituloLandingContainer"> {/* Contenedor para centrar */}
+              <h1 className="tituloLanding">¡Bienvenido Emprendedor!</h1>
+              <div className="buttonContainer">
                 <Button bProps={bProps} />
               </div>
             </div>
           </header>
-
           <section>
-            <Contenido />
+            <Usuario/>
           </section>
         </div>
       </div>
     </>
   );
 }
-

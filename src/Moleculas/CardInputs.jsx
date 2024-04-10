@@ -11,8 +11,7 @@ function CardInputs({title, titleSize = 50, text}) {
       ] 
     return (
         <div className="CardInputClass">
-            <p style={{fontSize: titleSize }}>{title}</p>
-            
+            <p style={{fontSize: titleSize }}>{title}</p>   
             <div className='container'>
                 <div className='Column'> 
                     <Input nombre={"Nombre"} > </Input>
@@ -22,7 +21,6 @@ function CardInputs({title, titleSize = 50, text}) {
                     <Input nombre={"Monto de Pago"}></Input>
                     <br />
                     <Input nombre={"Número de Telefono"}></Input>
-                    {/* Inputs de lado izquierdo */}
                 </div>
                 <div className='Column'>
                     <Input nombre={"Contacto de Emergencia"}></Input>
@@ -31,16 +29,11 @@ function CardInputs({title, titleSize = 50, text}) {
                     <br />
                     <Input nombre={"Número de Cuarto"}></Input>
                     <br />
-                    <Input nombre={"Contraseña"}></Input>
-                    {/* Inputs de lado Derecho */}
-                  
-                    </div>
-                    
-                    
+                    <Input nombre={"Contraseña"}></Input>                           
+                    </div>     
             </div>
             <Button bProps={bProps} />
-            <p style={{color: "black"}}>{text}</p>
-            
+            <p style={{color: "black"}}>{text}</p>        
         </div>
     );
 }   
