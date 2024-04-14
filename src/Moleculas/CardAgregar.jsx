@@ -33,6 +33,7 @@ function CardInputs({title, titleSize = 50, text}) {
                     </div>     
             </div>
 
+            <button  className='edicion'>Agregar</button>
             <p style={{color: "black"}}>{text}</p>        
             
         </div>

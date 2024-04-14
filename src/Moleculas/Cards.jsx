@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/moleculas.css";
 import Button from "../atomos/Button";
 
@@ -10,7 +11,6 @@ export default function Cards({ cProps }) {
     },
   ];
 
-  
   return (
     <>
       <div className="cards_Container">
@@ -30,15 +30,9 @@ export default function Cards({ cProps }) {
                   margin: "10px",
                 }}
               >
-                <button className={info.style}>
-                  <h3
-                    style={{
-                      color: "white",
-                    }}
-                  >
-                    {info.titulo}
-                  </h3>
-                </button>
+                <a href={info.link} className="Link-Raya">{info.titulo}</a>
+
+    
               </div>
             </div>
           </>

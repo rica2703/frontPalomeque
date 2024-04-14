@@ -1,12 +1,12 @@
-import CardInputs from "../Moleculas/CardInputs";
+import CardEdicion from "../Moleculas/CardEdicion";
 import LabelTitle from "../Moleculas/LabelTitle";
 import "../../styles/pages.css"
 
 function AgregarUsuarios() {
     return ( 
         <div className="PerfilClass">
-            <LabelTitle text="Agregar Usuarios" complement="RentLaR"/>
-            <CardInputs title="Editar"/>
+            <LabelTitle text="Editar Usuarios" complement="RentLaR"/>
+            <CardEdicion title="Editar"/>
            
         </div>
     );

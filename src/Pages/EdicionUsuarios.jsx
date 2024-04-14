@@ -1,11 +1,11 @@
  import "../../styles/pages.css"
-import CardInputs from '../Moleculas/CardInputs';
+
 import LabelTitle from '../Moleculas/LabelTitle';
 function EdicionUsuarios() {
     return ( 
         <div className="PerfilClass">
-            <LabelTitle text="Edición de Usuarios" complement="RentLaR"/>
-            <CardInputs title="Agregar" />
+            <LabelTitle text="Agregar Usuarios" complement="RentLaR"/>
+            <CardAgregar title="Agregar" />
            
         </div>
     );

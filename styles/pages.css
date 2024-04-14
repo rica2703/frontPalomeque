@@ -3,26 +3,60 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 200px
+}
+/*Card de Sugerencia */
+.cardlist {
+  max-width: 900px;
+  padding: 10px;
+  background: #FFFFFF;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 5px solid #426B1F;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: box-shadow 0.3s ease; 
 }
 
-.cardlist{
-    max-width: 800px;
-    padding: 5px;
-    background: #FAFAF5;
-    margin: 0 auto;
-    border-radius: 16px;
-    margin-top: 5px;    
-    text-align: center;
-    
-  
+.cardlist:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.cardlist h2{
-    text-align: center;
-    font-size: 50px; 
-    font-weight: bold; 
+
+.cardlist h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.cardlist p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.cardlist:hover p {
+  opacity: 0.8; 
+  transform: translateY(5px); 
+}
+
+
+.cardlist input[type="text"]:focus {
+  border-color: #4CAF50;
+  background-color: #E8F8E8; 
 
 }
+
+
+.cardlist input[type="text"] {
+  width: 80%; 
+  margin: 10px auto; 
+  padding: 5px; 
+  border: 5px solid #426B1F; 
+  border-radius: 5px; 
+  box-sizing: border-box; 
+  border: 5px solid #426B1F;
+  margin: 10px auto;
+}
+
 
 .PerfilClass{
     height: 100vh;
@@ -33,9 +67,10 @@
 
 /*Loggin*/
 .formContainerLogging {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    display: flex;
   }
   
   .formHeader {
@@ -64,6 +99,7 @@
   
   .inputContainer .inputTitle {
     margin-right: 10px;
+    width: 100px;
     font-size: 20px; 
     font-weight: bold; 
   }
@@ -104,7 +140,7 @@
   }
   
   .inputContainer:last-child {
-    margin-left: -100px; 
+    margin-right: 40px; 
   }
 
 /* landing.css */
@@ -163,4 +199,14 @@
   flex-direction: row;
   width: 50%;
   justify-content: flex-end;
+}
+
+/*Lista Usuario*/
+.Logo{
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
 }

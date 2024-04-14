@@ -1,13 +1,13 @@
 import CardTextS from "../Moleculas/cardText";
 import { data } from "../assets/data/data";
-import LabelTitle from "../Moleculas/LabelTitle";
+import LabelTitlee from "../Moleculas/LabelTitle";
 import "../../styles/pages.css"
 import img from "../assets/tarjeta.png"
 function InformacionDePago() {
     return ( 
         <div  className="InfPagoClass">
             
-            <LabelTitle complement="RentLaR" text="Información de pago"/>
+            <LabelTitlee complement="RentLaR" text="Información de pago"/>
 
 
             <img src={img} style={{margin: "40px"}} width={350}/>
@@ -17,4 +17,4 @@ function InformacionDePago() {
     );
 }
 
-export default InformacionDePago;
+export default InformacionDePago;   

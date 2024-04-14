@@ -1,12 +1,12 @@
 
 import CardContrato from "../Moleculas/CardContrato";
-import LabelTitle from "../Moleculas/LabelTitle";
+import LabelTitlee from "../Moleculas/LabelTitle";
 import "../../styles/moleculas.css"
 
 function Contrato() {
     return ( 
 <div>
-<LabelTitle text="Contrato" complement="RentLaR"/>
+<LabelTitlee text="Contrato" complement="RentLaR"/>
     <CardContrato/>
 </div>
 

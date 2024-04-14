@@ -1,12 +1,13 @@
 import React from 'react';
 import "../../styles/atomos.css";
+import { Link } from "react-router-dom";
 import { FaArrowLeft } from 'react-icons/fa'; 
 
 const BotonConFlechaAlRevez = () => {
   return (
-    <button className="boton">
-      <FaArrowLeft style={{ fontSize: '38px' }}/> 
-    </button>
+    <Link to="/menu-usuario" className="botones">
+      <FaArrowLeft style={{ fontSize: '20px' }}/> 
+    </Link>
   );
 }
 

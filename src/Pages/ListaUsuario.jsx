@@ -1,22 +1,21 @@
 import LabelTitle from "../Moleculas/LabelTitle";
 import AtomButton from "../atomos/AtomButton";
-import Card1 from "../Moleculas/Card1";
-import cardData from "../Moleculas/CardData";
+import img from "../assets/img/Logo.png"
 
 
 function ListaUsuario() {
-    return ( 
+    return (
 
-<div>
-<LabelTitle text="Lista de Usuarios" complement="RentLaR"/>
-<AtomButton/>
-{cardData.map((userData, index) => (
-                    <Card1 key={index} {...userData} />
-                ))}
-</div>
+        <div>
+            <LabelTitle text="Lista de Usuarios" complement="RentLaR" />
+            <img src={img} className="Logo"/>
+            <AtomButton /> 
+           
+            
+        </div>
 
-        
-     );
+
+    );
 }
 
 export default ListaUsuario;
