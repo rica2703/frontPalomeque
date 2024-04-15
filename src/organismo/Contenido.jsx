@@ -24,13 +24,7 @@ export default function Contenido() {
       titulo: "Agregar Usuarios",
       link: "/edicion-usuarios"
     },
-    {
-      tituloCard: "Editar Usuarios",
-      icon: EditNoteIcon, // Utiliza el icono en lugar de la URL
-      style: "Button",
-      titulo: "Editar Usuarios",
-      link: "/agregar-usuarios"
-    },
+    
     {
       tituloCard: "Chat Grupal",
       icon: ChatIcon, // Utiliza el icono en lugar de la URL
