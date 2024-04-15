@@ -8,8 +8,9 @@ function ListaUsuario() {
 
         <div>
             <LabelTitle text="Lista de Usuarios" complement="RentLaR" />
-            <img src={img} className="Logo"/>
             <AtomButton /> 
+          
+            <img src={img} className="Logo"/>
            
             
         </div>

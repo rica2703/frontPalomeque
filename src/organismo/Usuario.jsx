@@ -1,12 +1,15 @@
 import React from "react";
 import Cards from "../Moleculas/Cards";
-
+import ChatIcon from '@mui/icons-material/Chat';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import GavelIcon from '@mui/icons-material/Gavel';
 
 export default function Usuario() {
   const cProps = [
     {
       tituloCard: "Perfil",
-      url: "https://www.psyalive.com/blog/wp-content/uploads/2017/07/mapeamento-do-perfil-de-colaboradores-como-ele-e-um-aliado-das-empresas.jpg",
+      icon: AccountCircleIcon, // Utiliza el icono en lugar de la URL
       style:"Button",
       titulo:"Ver Perfil",
       link:"/perfil"
@@ -14,14 +17,13 @@ export default function Usuario() {
 
     {
       tituloCard: "Método de pago",
-      url: "https://www.womgp.com/blog/wp-content/uploads/2021/06/imagen-medios-de-pago-def-300x147.jpg",
-      style:"Button",
+      icon: AttachMoneyIcon, // Utiliza el icono en lugar de la URL
       titulo:"Ver metodo de pago",
       link:"/informacion-pago"
     },
     {
-      tituloCard: "Chat Sugerencia",
-      url: "https://www.gob.mx/cms/uploads/document/main_image/66073/Buzo_n_y_manual_anticorrupcio_n-01.jpg",
+      tituloCard: "Chat Grupal",
+      icon: ChatIcon, // Utiliza el icono en lugar de la URL
       style:"Button",
       titulo:"Ir al chat",
       link:"/sugerencias"
@@ -29,7 +31,7 @@ export default function Usuario() {
     },
     {
         tituloCard: "Contrato",
-        url: "https://blog.wasi.co/wp-content/uploads/2020/02/Formato-de-contrato-de-compraventa-de-inmuebles.jpg",
+        icon: GavelIcon, // Utiliza el icono en lugar de la URL
         style:"Button",
         titulo:"Ver Contrato",
         link:"/contrato"

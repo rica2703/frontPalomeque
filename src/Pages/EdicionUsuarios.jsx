@@ -1,11 +1,13 @@
  import "../../styles/pages.css"
-
+import Card2 from "../Moleculas/Card2";
 import LabelTitle from '../Moleculas/LabelTitle';
+
+
 function EdicionUsuarios() {
     return ( 
         <div className="PerfilClass">
             <LabelTitle text="Agregar Usuarios" complement="RentLaR"/>
-            <CardAgregar title="Agregar" />
+          <Card2 title="Agregar"/>
            
         </div>
     );

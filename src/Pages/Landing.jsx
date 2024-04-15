@@ -3,11 +3,15 @@ import "../../styles/atomos.css";
 import "../../styles/pages.css"; 
 import Button from "../atomos/Button";
 import Contenido from "../organismo/Contenido";
+import img from "../assets/img/Logo.png"
+
+
 export default function Landing() {
   const bProps = [{}];
   const bProps2 = [{}];
   return (
     <>
+              <img src={img} className="Landing"/>
       <div className="bigContainer">
         <div className="containerLanding">
           <header className="headerLanding">
@@ -15,7 +19,7 @@ export default function Landing() {
               <h1>RentLaR!</h1>
             </div>
             <div className="landingTitleContainer"> 
-              <h1 className="landingTitle">¡Bienvenido Arrendador!</h1>
+              <h1 className="landingTitle">¡Bienvenido Emprendedor!</h1>
               <div className="buttonContainer">
                 <Button bProps={bProps} />
               </div>

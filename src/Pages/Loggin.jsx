@@ -4,8 +4,11 @@ import Button from "../atomos/Button";
 import Label from "../Moleculas/Label";
 import "../../styles/pages.css";
 import { Link } from 'react-router-dom';
+import img from "../assets/img/Logo.png"
 
 export default function Logging() {
+
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,6 +19,7 @@ export default function Logging() {
       style: "Button",
     },
   ];
+  
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -37,8 +41,9 @@ export default function Logging() {
   return (
     <>
       <div className="bigContainer">
+      <img src={img} className="Login"/>  
         <div className="containerLogging">
-          <div className="headerLogging">
+          <div className="headerLogging"> 
             <Label title="Bienvenidos a" text="RentLaR" />
           </div>
           <div className="formContainerLogging">

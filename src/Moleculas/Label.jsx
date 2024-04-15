@@ -7,6 +7,7 @@ function Label({title, text}) {
                         textAlign: "center",
                         margin: "0 auto",
                         marginLeft: "160px",
+                    
                     }}
 
                 >

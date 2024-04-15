@@ -4,6 +4,7 @@ import "../../styles/atomos.css";
 import "../../styles/pages.css"; 
 import Button from "../atomos/Button";
 import Usuario from "../organismo/Usuario";
+import img from "../assets/img/Logo.png"
 
 export default function MenuUsuario() {
   const bProps = [{}];
@@ -11,13 +12,14 @@ export default function MenuUsuario() {
   return (
     <>
       <div className="bigContainer">
+      <img src={img} className="Menu"/>  
         <div className="containerLanding">
           <header className="headerLanding">
             <div className="rentlarTitle">
               <h1>RentLaR!</h1>
             </div>
             <div className="tituloLandingContainer"> {/* Contenedor para centrar */}
-              <h1 className="tituloLanding">¡Bienvenido Emprendedor!</h1>
+              <h1 className="tituloLanding">¡Bienvenido Arrendador!</h1>
               <div className="buttonContainer">
                 <Button bProps={bProps} />
               </div>

@@ -136,7 +136,7 @@
   }
   
   .buttonContainer {
-    margin-top: 20px;
+    margin-top:   0px;
   }
   
   .inputContainer:last-child {
@@ -148,7 +148,7 @@
 .rentlarTitle {
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin-top: 0px;
     margin-left: -3.5%;
     color: green;
   }
@@ -184,7 +184,7 @@
 .tituloLandingContainer {
   text-align: center; 
   margin-left: 35%;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .tituloLanding {
@@ -204,9 +204,29 @@
 /*Lista Usuario*/
 .Logo{
   position: absolute;
-  top: 50%;
-  left: 44%;
+  top: 60%;
+  left: 80%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
+}
+
+.card-container {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card-container.visible {
+  opacity: 1;
+}
+
+.card-container.hidden {
+  opacity: 0;
+}
+
+/*Imagen Menu*/
+.Sugerencia{
+  float: right;
+    top: 60px;   
+    position: relative; 
 }

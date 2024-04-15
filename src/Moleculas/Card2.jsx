@@ -1,14 +1,14 @@
-import '../../styles/moleculas.css'
+import React from 'react';
+import '../../styles/moleculas.css';
 import Input from '../atomos/Input';
 
-
-function CardAgregar({title, titleSize = 50, text}) {
+function Card2({title, titleSize = 50, text}) {
     const bProps = [
         {
           nombre:"Continuar",
           style:"Button",
         }
-      ] 
+    ]; 
     return (
         <div className="CardInputClass">
             <p style={{fontSize: titleSize }}>{title}</p>   
@@ -30,15 +30,12 @@ function CardAgregar({title, titleSize = 50, text}) {
                     <Input nombre={"Número de Cuarto"}></Input>
                     <br />
                     <Input nombre={"Contraseña"}></Input>                           
-                    </div>     ´
-
-                    <button  className='edicion'>Agregar</button>
+                </div>     
             </div>
-
-          
+            <button className='edicion'>Agregar</button> {/* Agregar la clase 'edicion' al botón */}
             <p style={{color: "black"}}>{text}</p>        
             
         </div>
     );
 }   
-export default CardAgregar;
+export default Card2;
