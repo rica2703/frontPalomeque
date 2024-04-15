@@ -8,7 +8,7 @@ export default function Cards({ cProps }) {
       {cProps.map((info, index) => (
         <div key={index} className="card_Cont">
           <div className="card_Img">
-            {info.icon && <info.icon className="Icono" style={{ fontSize: "160px", color: "rgb(0, 128, 128)" }} />}
+            {info.icon && <info.icon  style={{ fontSize: "160px", color: "rgb(1, 120, 70)" }} />}
           </div>
           <div className="text_Img">
             <h1>{info.tituloCard}</h1>
