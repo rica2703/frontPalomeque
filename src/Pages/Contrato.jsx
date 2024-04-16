@@ -1,6 +1,6 @@
 
 import CardContrato from "../Moleculas/CardContrato";
-import LabelTitlee from "../Moleculas/LabelTitle";
+import LabelTitlee from "../Moleculas/LabelTitlee";
 import "../../styles/moleculas.css"
 
 function Contrato() {

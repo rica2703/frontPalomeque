@@ -1,13 +1,15 @@
 import '../../styles/moleculas.css';
 import "../../styles/atomos.css"
 import BotonArrendatario from '../atomos/Arrendatario';
+
+
 BotonArrendatario
 
 function LabelTitlee({complement, text}) {
     return (
         <div  className="TitleLabelClass">
             <div>
-            <Arrendatario/>
+            <BotonArrendatario/>
                 <h1 className="textClass">
                     {text}
                 </h1>

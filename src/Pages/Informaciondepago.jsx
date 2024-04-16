@@ -1,6 +1,6 @@
 import CardTextS from "../Moleculas/cardText";
 import { data } from "../assets/data/data";
-import LabelTitlee from "../Moleculas/LabelTitle";
+import LabelTitlee from "../Moleculas/LabelTitlee";
 import "../../styles/pages.css"
 import img from "../assets/tarjeta.png"
 function InformacionDePago() {

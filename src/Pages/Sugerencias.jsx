@@ -1,5 +1,5 @@
 import Card from '../Moleculas/Card';
-import LabelTitlee from '../Moleculas/LabelTitle';
+import LabelTitlee from '../Moleculas/LabelTitlee';
 import "../../styles/pages.css"
 import Input from '../atomos/Input';
 import "../../styles/pages.css"

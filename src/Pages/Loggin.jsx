@@ -4,11 +4,9 @@ import Button from "../atomos/Button";
 import Label from "../Moleculas/Label";
 import "../../styles/pages.css";
 import { Link } from 'react-router-dom';
-import img from "../assets/img/Logo.png"
+import img from "../assets/img/Logo.png";
 
 export default function Logging() {
-
-  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,7 +17,6 @@ export default function Logging() {
       style: "Button",
     },
   ];
-  
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -29,11 +26,12 @@ export default function Logging() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (username !== "250" || password !== "palomeque") {
       setError("Usuario o contraseña incorrectos");
     } else {
-      // Aquí puedes redirigir al usuario a la página de inicio o realizar otras acciones necesarias
+      // Redirigir al usuario a la página de inicio si la autenticación es exitosa
       window.location.href = "/landing";
     }
   };
@@ -41,12 +39,12 @@ export default function Logging() {
   return (
     <>
       <div className="bigContainer">
-      <img src={img} className="Login"/>  
+        <img src={img} className="Login"/>  
         <div className="containerLogging">
           <div className="headerLogging"> 
             <Label title="Bienvenidos a" text="RentLaR" />
           </div>
-          <div className="formContainerLogging">
+          <form className="formContainerLogging" onSubmit={handleSubmit}>
             <div className="formHeader">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/6676/6676023.png"
@@ -87,13 +85,11 @@ export default function Logging() {
             </div>
             <div className="error">{error}</div>
             <div className="buttonContainer">
-            <Link to="/landing" className="button-link">
+              <button className="button-link" type="submit">
                 <Button bProps={bProps} />
-              </Link>   
-
-            
+              </button>   
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>

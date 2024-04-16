@@ -1,6 +1,8 @@
  import "../../styles/pages.css"
  import CardInputs from '../Moleculas/CardInputs';
- import LabelTitlee from '../Moleculas/LabelTitle';
+import LabelTitlee from "../Moleculas/LabelTitlee";
+
+
 function Perfil() {
     return ( 
         <div className="PerfilClass">

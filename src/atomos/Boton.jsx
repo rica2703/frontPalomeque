@@ -5,7 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 
 const BotonConFlechaAlRevez = () => {
   return (
-    <Link to="/menu-usuario" className="botones">
+    <Link to="/landing" className="botones">
       <FaArrowLeft style={{ fontSize: '20px' }}/> 
     </Link>
   );
