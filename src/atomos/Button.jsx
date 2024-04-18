@@ -5,7 +5,7 @@ export default function Button({ bProps }) {
   return (
     <>
       {bProps.map((info) => (
-        <button className={info.style}>
+        <button onClick={info.onClick} className={info.style}>
           <h3
             style={{
               color: "white",

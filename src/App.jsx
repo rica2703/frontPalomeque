@@ -11,23 +11,42 @@ import AgregarUsuarios from "./Pages/AgregarUsuarios";
 import EdicionUsuarios from "./Pages/EdicionUsuarios";
 import ListaUsuario from "./Pages/ListaUsuario";
 import MenuUsuario from "./Pages/MenuUsuario";
+import userContext from './userContext';
+import { useState } from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+const router = createBrowserRouter([
+  { path: "/", element: <Logging /> },
+  { path: "/landing", element: <Landing /> },
+  { path: "/informacion-pago", element: <InformacionDePago /> },
+  { path: "/contrato", element: <Contrato /> },
+  { path: "/sugerencias", element: <Sugerencias /> },
+  { path: "/perfil", element: <Perfil /> },
+  { path: "/agregar-usuarios", element: <AgregarUsuarios /> },
+  { path: "/edicion-usuarios", element: <EdicionUsuarios /> },
+  { path: "/lista-usuario", element: <ListaUsuario /> },
+  { path: "/menu-usuario", element: <MenuUsuario /> },
 
+
+]);
 const App = () => {
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    nombre:"",
+    numCelular: 0,
+    nombreEmergencia: "",
+    numEmergencia: 0,
+    numCuarto: 0,
+  });
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Logging />} /> 
-        <Route path="/landing" element={<Landing />} /> 
-        <Route path="/informacion-pago" element={<InformacionDePago />} />
-        <Route path="/contrato" element={<Contrato />} />
-        <Route path="/sugerencias" element={<Sugerencias />} />
-        <Route path="/perfil" element={<Perfil />} />
-        <Route path="/agregar-usuarios" element={<AgregarUsuarios />} />
-        <Route path="/edicion-usuarios" element={<EdicionUsuarios />} />
-        <Route path="/lista-usuario" element={<ListaUsuario />} />
-        <Route path="/menu-usuario" element={<MenuUsuario />} />
-      </Routes>
-    </Router>
+    <>
+    <userContext.Provider value={{ user, setUser }}>
+    <RouterProvider router={router} />
+    </userContext.Provider>
+    </>
   );
 };
 

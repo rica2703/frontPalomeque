@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/atomos.css';
 import Card1 from '../Moleculas/Card1';
 import LooksOneIcon from '@mui/icons-material/LooksOne';
@@ -7,7 +7,10 @@ import Looks3Icon from '@mui/icons-material/Looks3';
 import Looks4Icon from '@mui/icons-material/Looks4';
 import Looks5Icon from '@mui/icons-material/Looks5';
 import Looks6Icon from '@mui/icons-material/Looks6';
-
+import { useContext } from 'react';
+import userContext from '../userContext';
+import { useNavigate } from 'react-router-dom';
+// import { useEffect } from 'react';
 const Boton = ({ children, onClick, nombre, icono }) => {
   const renderIcon = (icono) => {
     switch (icono) {
@@ -37,96 +40,104 @@ const Boton = ({ children, onClick, nombre, icono }) => {
 };
 
   const ListaBotones = () => {
-    const cardData = [
-      {
-        nombre: "Luis Hernandez  ",
-        fechaPago: "01/04/2024",
-        montoPago: "$2800",
-        telefono: "123-456-7890",
-        contactoEmergencia: "Contacto 1",
-        numeroEmergencia: "987-654-3210",
-        numeroCuarto: "101",
-        contraseña: "contraseña1"
+    const {user,setUser}=useContext(userContext);
+    const [token,setToken]=useState("");
+    const [datos,setDatos]=useState([]);
+    const [iteracion,setIteracion]=useState(8);
+    const navigate=useNavigate();
+    useEffect(() => {
+      const tokenFromStorage = localStorage.getItem('token');
+      setToken(tokenFromStorage);
+  }, []);
+  fetch('http://localhost:8080/api/auth/users', {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json',
+          'x-access-token': token,
       },
-      {
-        nombre: "Margarita Olivera",
-        fechaPago: "02/04/2024",
-        montoPago: "$2800",
-        telefono: "234-567-8901",
-        contactoEmergencia: "Contacto 2",
-        numeroEmergencia: "876-543-2109",
-        numeroCuarto: "102",
-        contraseña: "contraseña2"
-      },
-      {
-        nombre: "Rodrigo Borrayes",
-        fechaPago: "03/04/2024",
-        montoPago: "$2800",
-        telefono: "345-678-9012",
-        contactoEmergencia: "Contacto 3",
-        numeroEmergencia: "765-432-1098",
-        numeroCuarto: "103",
-        contraseña: "contraseña3"
-      },
-      {
-        nombre: "Sofia Abarca Ruiz",
-        fechaPago: "04/04/2024",
-        montoPago: "$2800",
-        telefono: "456-789-0123",
-        contactoEmergencia: "Contacto 4",
-        numeroEmergencia: "654-321-0987",
-        numeroCuarto: "104",
-        contraseña: "contraseña4"
-      },
-      {
-        nombre: "Fernanda Morales",
-        fechaPago: "05/04/2024",
-        montoPago: "$2800",
-        telefono: "567-890-1234",
-        contactoEmergencia: "Contacto 5",
-        numeroEmergencia: "543-210-9876",
-        numeroCuarto: "105",
-        contraseña: "contraseña5"
-      },
-      {
-        nombre: "Mauricio de Santos",
-        fechaPago: "06/04/2024",
-        montoPago: "$2800",
-        telefono: "678-901-2345",
-        contactoEmergencia: "Contacto 6",
-        numeroEmergencia: "432-109-8765",
-        numeroCuarto: "106",
-        contraseña: "contraseña6"
-      }
-    ];
-
+  })
+      .then(response => {
+          if (response.ok) {
+              // Si la respuesta del servidor es exitosa (código de estado 200),
+              // parseamos la respuesta como JSON y la devolvemos
+              return response.json();
+          } else {
+              // Si el servidor devuelve un código de estado de error, lanzamos una excepción con un mensaje de error
+              throw new Error('Error al obtener los datos.');
+          }
+      })
+      .then(data => {
+          // Si todo va bien y se recibe una respuesta válida del servidor, se ejecuta esta parte
+          console.log('Datos obtenidos:', data);
+          setDatos(data)
+          // Puedes realizar acciones adicionales con los datos, como actualizar el estado de tu aplicación
+      })
+      .catch(error => {
+          // Si ocurre algún error en el proceso, se captura aquí
+          console.error('Error:', error.message);
+          // Aquí puedes mostrar un mensaje de error al usuario, informando sobre lo que ha salido mal
+      });
+      // useEffect(()=>{
+        
+      // },[]);
+      
       const [tarjetaVisible, setTarjetaVisible] = useState(false);
       const [tarjetaSeleccionada, setTarjetaSeleccionada] = useState(null);
     
       const manejarClicBoton = (indice) => {
         if (indice === tarjetaSeleccionada) {
-          setTarjetaVisible(false);
+          setTarjetaVisible(!tarjetaVisible);
           setTarjetaSeleccionada(null);
+          // alert("entro al if");
+          setUser(null); // Reinicia el contexto
+          // alert("dato eliminado del contexto");
         } else {
+          // alert("entro al else");
           setTarjetaVisible(true);
           setTarjetaSeleccionada(indice);
+          // setUser({
+          //   username: datos[indice].username,
+          //   email: datos[indice].email,
+          //   nombre: datos[indice].nombre,
+          //   numCelular: datos[indice].numCelular,
+          //   nombreEmergencia: datos[indice].nombreEmergencia,
+          //   numEmergencia: datos[indice].numEmergencia,
+          //   numCuarto: datos[indice].numCuarto,
+          // });
+          // alert("dato guardado en contexto",tarjetaSeleccionada,datos[11].nombre);
         }
       };
-    
+      
+    const handlerClickEditar=(indice)=>{
+      // alert("tarjeta seleccionada es: "+indice);
+      setUser({
+          username: datos[indice].username,
+          email: datos[indice].email,
+          nombre: datos[indice].nombre,
+          numCelular: datos[indice].numCelular,
+          nombreEmergencia: datos[indice].nombreEmergencia,
+          numEmergencia: datos[indice].numEmergencia,
+          numCuarto: datos[indice].numCuarto,
+        });
+        navigate("/agregar-usuarios")
+        // alert(datos[indice].numCuarto)
+    }
       return (
         <div className="lista-botones">
           <div>
-            {cardData.map((item, index) => (
+            {datos.map((item, index) => (
               <div key={index}>
-                <Boton onClick={() => manejarClicBoton(index)} nombre={item.nombre}>
+                {/* <Boton onClick={() => manejarClicBoton(index)} nombre={item.nombre}>
                   {item.nombre}
-                </Boton>
+                </Boton> */}
+                <button className='boton' onClick={()=>manejarClicBoton(index)}>{item.nombre}</button>
                 <br /><br />
               </div>
             ))}
           </div>
           <div className={`card-container ${tarjetaVisible ? 'visible' : 'hidden'}`}>
-            {tarjetaSeleccionada !== null && <Card1 {...cardData[tarjetaSeleccionada]} />}
+            {tarjetaSeleccionada !== null && 
+            <Card1 onClick={()=>handlerClickEditar(tarjetaSeleccionada)} numeroCuarto={datos[tarjetaSeleccionada].numCuarto} contactoEmergencia={datos[tarjetaSeleccionada].nombreEmergencia} nombre={datos[tarjetaSeleccionada].nombre} telefono={datos[tarjetaSeleccionada].numCelular} numeroEmergencia={datos[tarjetaSeleccionada].numEmergencia} />}
           </div>
         </div>
       );

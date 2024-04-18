@@ -1,9 +1,9 @@
 import '../../styles/atomos.css'
-function Input({type = "text", nombre}) {
+function Input({type = "text", nombre,textoInput,onChange,value}) {
     return (
         <div className="InputClass">
             <label >{nombre}</label>
-            <input type={type}/>
+            <input onChange={onChange} placeholder={textoInput}value={value}  type={type}/>
         </div>
     );
 }
